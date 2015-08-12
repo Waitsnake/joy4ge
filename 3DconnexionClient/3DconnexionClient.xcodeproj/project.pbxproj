@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,9 @@
 		CC467B6715D5D175005E7B3B /* BoxIOHIDElementRef.m in Sources */ = {isa = PBXBuildFile; fileRef = CC467B6515D5D175005E7B3B /* BoxIOHIDElementRef.m */; };
 		CC65168915D537EE00637391 /* ConConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = CC65168715D537EE00637391 /* ConConnection.h */; };
 		CC65168A15D537EE00637391 /* ConConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CC65168815D537EE00637391 /* ConConnection.m */; };
+		CC7B8E1A1B7AA7EC00D8C6D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		CC7B8E1C1B7AA98400D8C6D1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7B8E1B1B7AA98400D8C6D1 /* CoreFoundation.framework */; };
+		CC7B8E431B7AB75D00D8C6D1 /* 3DconnexionClient_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF5E0370ADEE00C91783 /* 3DconnexionClient_Prefix.pch */; };
 		CCD590B115D6723400B2DDC3 /* BoxBOOL.h in Headers */ = {isa = PBXBuildFile; fileRef = CCD590AF15D6723400B2DDC3 /* BoxBOOL.h */; };
 		CCD590B215D6723400B2DDC3 /* BoxBOOL.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD590B015D6723400B2DDC3 /* BoxBOOL.m */; };
 		CCEB011415D30AC800007040 /* ConClient.h in Headers */ = {isa = PBXBuildFile; fileRef = CCEB011215D30AC800007040 /* ConClient.h */; };
@@ -40,7 +43,7 @@
 		CCF18EED15CEC91F00B6EB63 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
-			dstPath = /Library/Frameworks;
+			dstPath = "~/Library/Frameworks";
 			dstSubfolderSpec = 0;
 			files = (
 				CCF18EF915CEC94D00B6EB63 /* 3DconnexionClient.framework in CopyFiles */,
@@ -69,6 +72,7 @@
 		CC467B6515D5D175005E7B3B /* BoxIOHIDElementRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxIOHIDElementRef.m; sourceTree = "<group>"; };
 		CC65168715D537EE00637391 /* ConConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConConnection.h; sourceTree = "<group>"; };
 		CC65168815D537EE00637391 /* ConConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConConnection.m; sourceTree = "<group>"; };
+		CC7B8E1B1B7AA98400D8C6D1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		CCD590AF15D6723400B2DDC3 /* BoxBOOL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxBOOL.h; sourceTree = "<group>"; };
 		CCD590B015D6723400B2DDC3 /* BoxBOOL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxBOOL.m; sourceTree = "<group>"; };
 		CCEB011215D30AC800007040 /* ConClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConClient.h; sourceTree = "<group>"; };
@@ -89,7 +93,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7B8E1C1B7AA98400D8C6D1 /* CoreFoundation.framework in Frameworks */,
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				CC7B8E1A1B7AA7EC00D8C6D1 /* Foundation.framework in Frameworks */,
 				CCF18E2115CEB96400B6EB63 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +167,7 @@
 		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC7B8E1B1B7AA98400D8C6D1 /* CoreFoundation.framework */,
 				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
 				D2F7E79907B2D74100F64583 /* CoreData.framework */,
 				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
@@ -241,6 +248,7 @@
 				CCD590B115D6723400B2DDC3 /* BoxBOOL.h in Headers */,
 				CC2E990B15D6DA38000DE2D7 /* BoxDouble.h in Headers */,
 				CC30CC1715D841A000C94076 /* ConfigButton.h in Headers */,
+				CC7B8E431B7AB75D00D8C6D1 /* 3DconnexionClient_Prefix.pch in Headers */,
 				CC30CC1F15D8436E00C94076 /* ConfigAxis.h in Headers */,
 				CC30CC3215D8495600C94076 /* ConfigHIDDevice.h in Headers */,
 			);
@@ -274,8 +282,11 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "3DconnexionClient" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -342,20 +353,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = 3DconnexionClient_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = "~/Library/Frameworks/";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_MODULE_NAME = 3DconnexionClient;
 				PRODUCT_NAME = 3DconnexionClient;
-				WRAPPER_EXTENSION = framework;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -363,43 +383,59 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = 3DconnexionClient_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = "~/Library/Frameworks/";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_MODULE_NAME = 3DconnexionClient;
 				PRODUCT_NAME = 3DconnexionClient;
-				WRAPPER_EXTENSION = framework;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};

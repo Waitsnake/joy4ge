@@ -35,7 +35,7 @@ void			CleanupConnexionHandlers			(void)
 //	[pool release];
 }
 
-UInt16			RegisterConnexionClient				(UInt32 signature, UInt8 *name, UInt16 mode, UInt32 mask)
+uint16_t		RegisterConnexionClient				(uint32_t signature, uint8_t *name, uint16_t mode, uint32_t mask)
 {
 	NSLog(@"RegisterConnexionClient(signature = %8.8X, name = %s, mode = %4.4X, mask = %8.8X)\n",(unsigned int)signature,name,mode,(unsigned int)mask);
 	NSString  *newName = nil;
@@ -54,7 +54,7 @@ UInt16			RegisterConnexionClient				(UInt32 signature, UInt8 *name, UInt16 mode,
 	return newclientID;
 }
 
-void			SetConnexionClientMask				(UInt16 clientID, UInt32 mask)
+void			SetConnexionClientMask				(uint16_t clientID, uint32_t mask)
 {
 	NSLog(@"SetConnexionClientMask(clientID= %d, mask = %8.8X)\n",clientID,(unsigned int)mask);
 	for(ConClient *cl in theConnection.connectedClients)
@@ -82,14 +82,14 @@ void			UnregisterConnexionClient			(UInt16 clientID)
 	}
 }
 
-OSErr			ConnexionControl					(UInt32 message, SInt32 param, SInt32 *result)
+int16_t			ConnexionControl					(uint32_t message, int32_t param, int32_t *result)
 {
 	NSLog(@"ConnexionControl(message = %d, param = %d, result = %8.8X)\n",(int)message,(int)param,(unsigned int)*result);
 	// Not implemented, because not used by Google Earth	
 	return noErr;
 }
 
-OSErr			ConnexionClientControl				(UInt16 clientID, UInt32 message, SInt32 param, SInt32 *result)
+int16_t			ConnexionClientControl				(uint16_t clientID, uint32_t message, int32_t param, int32_t *result)
 {
 	
 	NSLog(@"ConnexionClientControl(clientID = %d, message = %d, param = %d, result = %8.8X)\n", clientID, (int)message,(int)param,(unsigned int)*result);
@@ -97,7 +97,7 @@ OSErr			ConnexionClientControl				(UInt16 clientID, UInt32 message, SInt32 param
 	return noErr;
 }
 
-OSErr			ConnexionGetCurrentDevicePrefs		(UInt32 deviceID, ConnexionDevicePrefs *prefs)
+int16_t			ConnexionGetCurrentDevicePrefs		(uint32_t deviceID, ConnexionDevicePrefs *prefs)
 {
 	NSLog(@"ConnexionGetCurrentDevicePrefs(deviceID = %d)\n",(int)deviceID);
 	// Not implemented, because not used by Google Earth	
