@@ -1,26 +1,31 @@
 joy4ge (Joystick for Google Earth) is a framework to connect any USB HID device (e.g. a Joystick) to an application that uses the 3DconnexionClient framework (e.g. Google Eath).
 
-To download from github (http://github.com/stino/joy4ge), click on the "Downloads" link in the upper right, click "Download as zip", and get a zip file.
+To download it from github (http://github.com/stino/joy4ge), click on the "Downloads" link in the upper right, click "Download as zip", and get a zip file.
 
-To compile open project in XCode(last testet with 6.2) and use build. The compiled framework will be placed under ~/Library/Frameworks/3DconnexionClient.framework/ . 
+To compile joy4ge open project in XCode (last tested with Version 6.2) and build it. The compiled framework will be placed in ~/Library/Frameworks/3DconnexionClient.framework/ . 
 
-With Google Earth 6.0 for OSX it sould work out of the box.
-But with Google Earth 7.1 for OSX you have to open the App-Bundle-Flie of Google Earth first and go to Contents/Frameworks/ and rename the 3DconnexionClient.framework the to an other name.
-For some reason Google has placed the original Framework of 3Dconnexion there, but this version will only work with devces of 3Dconnexion. Since in the App-Bundle is the first seach place of the OSX you have the rename it,
-and than the version under ~/Library/Framework should be used. If you have installed an official driver of 3Dconnexion you may have to do more renames in /Library/Framework/ to disable original framework there too.
-But if you have an original 3D-Mouse of 3Dconnexion you will not need joy4ge ;-) .
+With Google Earth 6.0 for OSX joy4ge sould work out of the box.
+But with Google Earth 7.1 for OSX you have to open the App-Bundle of 'Google Earth' application first and than go to Contents/Frameworks/ and rename the 3DconnexionClient.framework to an other name you like.
+For some reason Google has placed the original Framework of 3Dconnexion into the application bundle, but this original version of the 3DconnexionClient will only work with devices of 3Dconnexion (e.g. 3D mouse). 
+Since in the App-Bundle is the first search place for frameworks we have the rename the original framework. Than joy4ge in ~/Library/Framework should be used by Google Earth. 
+If you have installed an official driver of 3Dconnexion you may also have to rename the framwork in /Library/Framework/ to disable it.
+But if you realy have an original 3D-Mouse of 3Dconnexion you will never need joy4ge. ;-)
 
-When the joy4ge framework is active (means you installed it correct an start Google Earth) and you have pluged in an USB HID device to your computer you should see in the Apple Console Log entries like this:
+When the joy4ge framework is active (means you installed it correct an than start Google Earth) and you have pluged in an USB HID device to your computer you should see in the Apple Console Log entries like this:
 12.08.15 08:44:13,224 Google Earth[2885]: InstallConnexionHandlers()
 12.08.15 08:44:13,225 Google Earth[2885]: RegisterConnexionClient(signature = 45727468, name = (null), mode = 0001, mask = 00003F00)
 12.08.15 08:44:14,281 Google Earth[2885]: HID device plugged: PS3/PC Adaptor
 12.08.15 08:44:14,282 Google Earth[2885]: Number of detected axis: 4
 12.08.15 08:44:14,282 Google Earth[2885]: Number of detected buttons: 12
 
-For each detected device during the joy4ge framework is active it will append an entry for each USB HID device in the file ~/Library/Application Support/3DconnexionClient/controller.config.plist .
-In this file a kind of default mapping is used if you plug an device for the first time. This default mapping is from my USB-to-PS2-Controller and for sure not correct for your device.
-But you can change controller.config.plist with an editor and change the mapping and also the the axis dead zone calibration of your own device. This is very tricky i know an you have to look in to source code to understand all entries.
-Well I know I need to describe the controller.config.plist a bit better in future. And much better will be an GUI application to do this, but at moment I have no experience how to develop such an GUI Applicatio a bit better in future. 
-And much better will be an GUI application to do this, but at moment I have no time to develop such an GUI Application. You can join the project and support me if you want. :-)
+For each connected USB HID device during the joy4ge framework is active it will append an default device configuration into the file ~/Library/Application Support/3DconnexionClient/controller.config.plist .
+This default configuration contains an axis an button mapping from an emulated 3Dconnexion mouse to your USB HID device. The default configuration for the first time is allways the one from my USB-to-PS2-Controller that i use during development
+and for sure not correct configuration for your device. O:-)
+But you can change controller.config.plist with an editor and change the mapping and also set an dead zone calibration for axis define the scale factor and so on. This reconfiuration is maybe a bit tricky and need some time. 
+Probably you have to look into the source code of joy4ge to understand all entries.
+Well I know I need to describe the controller.config.plist a bit better in the future. And much better will be an GUI application that suport an user with the mapping.
+Butunfortunely at moment I have no time and enough experience to develop such an GUI application. 
+But you can join the project anytime and support me with writing an GUI application if you want. :-)
 
 Copyright 2015 Marco Koehler
+
