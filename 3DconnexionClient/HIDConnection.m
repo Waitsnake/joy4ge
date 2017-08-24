@@ -72,11 +72,15 @@ void unplugCallback(void* context, IOReturn result, void* sender, IOHIDDeviceRef
 
 - (void) hidDevicePlugged:(IOHIDDeviceRef)devRef {
 	HIDDevice* newDevice = [HIDDevice deviceWithRef:devRef];
+    unsigned long int vedorDevId = 0x046DC626; // VID_046D & PID_C626
 	if (newDevice) {
 		self.plugHidDevs = [self.plugHidDevs arrayByAddingObject:newDevice];
 		NSLog(@"HID device plugged: %@", newDevice);
 		NSLog(@"Number of detected axis: %d",newDevice.countAxis);
 		NSLog(@"Number of detected buttons: %d",newDevice.countButtons);
+
+        if (theConnection.messageHandler != NULL) theConnection.messageHandler(theConnection.connectionID,kConnexionCtlGetDeviceID,&vedorDevId);
+        
 	}
 }
 

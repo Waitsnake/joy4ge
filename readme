@@ -27,5 +27,15 @@ Well I know I need to describe the controller.config.plist a bit better in the f
 Butunfortunely at moment I have no time and enough experience to develop such an GUI application. 
 But you can join the project anytime and support me with writing an GUI application if you want. :-)
 
+
+Update 2017:
+------------
+- Add example configuration
+- Add precompiled release for Mac OX 11.3 (Zipped)
+- Update project files to XCode 7.3.1
+- Update to 3Dconnexion API v10-4-4 (r2541)
+- Make it useable with Google Earth Pro 7.3.0.3832
+Attension: The controller needs now to be acivated inside Google Earth under Preferences->Navigation->Activate Controller
+
 Copyright 2015 Marco Koehler
 

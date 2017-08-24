@@ -487,7 +487,7 @@ void valueCallback(void* context, IOReturn result, void* sender, IOHIDValueRef v
 		if (theConnection.messageHandler != NULL) theConnection.messageHandler(theConnection.connectionID,kConnexionMsgDeviceState,&axis_event);
 
 		/*
-		 NSLog(@"%@ axis %5.2f/%5.2f %5.2f/%5.2f %5.2f/%5.2f buttons %i %i %i %i %i %i %i %i %i %i %i %i", self.devName,
+		 NSLog(@"ID:%4.4X %@ axis %5.2f/%5.2f %5.2f/%5.2f %5.2f/%5.2f buttons %i %i %i %i %i %i %i %i %i %i %i %i", theConnection.connectionID, self.devName,
 		 [self getAxisValueAt:0],[self getAxisValueAt:1],
 		 [self getAxisValueAt:2],[self getAxisValueAt:3],
 		 [self getAxisValueAt:4],[self getAxisValueAt:5],

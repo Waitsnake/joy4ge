@@ -22,8 +22,15 @@ OSErr			InstallConnexionHandlers			(ConnexionMessageHandlerProc messageHandler, 
 	pool = [[NSAutoreleasePool alloc] init];
 	theConnection = [[[ConConnection alloc] initWithConnectionID:MY_ONE_CON_ID  andMsgHandler:messageHandler andAddHandler:addedHandler andRemHandler:removedHandler] retain];
 	theHidCollection = [[[HIDConnection alloc] init] retain];
-	NSLog(@"InstallConnexionHandlers()\n");
+	NSLog(@"InstallConnexionHandlers(messageHandler = %8.8X, addedHandler = %8.8X, removedHandler = %8.8X)\n",(int32_t)messageHandler,(int32_t)addedHandler,(int32_t)removedHandler);
 	return noErr;
+}
+
+OSErr			SetConnexionHandlers				(ConnexionMessageHandlerProc messageHandler, ConnexionAddedHandlerProc addedHandler, ConnexionRemovedHandlerProc removedHandler, bool useSeparateThread)
+{
+    NSLog(@"SetConnexionHandlers()\n");
+    // Not implemented, because not used by Google Earth	
+    return noErr;
 }
 
 void			CleanupConnexionHandlers			(void)
@@ -49,7 +56,10 @@ uint16_t		RegisterConnexionClient				(uint32_t signature, uint8_t *name, uint16_
 		}
 		newclientID = [theConnection addClientWithMask:mask andMode:mode andSignature:signature andName:newName];
 		if (newName != nil) [newName release];
+        NSLog(@"newclientID = %4.4X\n",newclientID);
+
 		if (theConnection.addedHandler != NULL) theConnection.addedHandler(theConnection.connectionID);
+        
 	}
 	return newclientID;
 }
@@ -75,8 +85,10 @@ void			UnregisterConnexionClient			(UInt16 clientID)
 			if (cl.clientID == clientID)
 			{
 				foundCl = cl;
+                
 			}
 		}
+        
 		// we have to remove an object from array it outside the loop!
 		if (foundCl!=nil) [theConnection removeClient: foundCl];
 	}
@@ -102,4 +114,11 @@ int16_t			ConnexionGetCurrentDevicePrefs		(uint32_t deviceID, ConnexionDevicePre
 	NSLog(@"ConnexionGetCurrentDevicePrefs(deviceID = %d)\n",(int)deviceID);
 	// Not implemented, because not used by Google Earth	
 	return noErr;
+}
+
+int16_t			ConnexionSetButtonLabels			(uint8_t *labels, uint16_t size)
+{
+    NSLog(@"ConnexionSetButtonLabels(labels = %s; size = %d)\n",labels, size);
+    // Not implemented, because not used by Google Earth
+    return noErr;
 }

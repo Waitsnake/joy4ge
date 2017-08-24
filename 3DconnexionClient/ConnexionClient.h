@@ -20,6 +20,12 @@ extern "C" {
 
 #define kConnexionClientWildcard		0x2A2A2A2A
 
+// Use kConnexionClientManual ('++++') as the application signature in the
+// RegisterConnexionClient API to manually take over the device with
+// a ClientControl call:
+
+#define kConnexionClientManual			0x2B2B2B2B
+
 // There are two plugin operating modes: one takes over the device
 // and disables all built-in driver assignments, the other complements
 // the driver by only executing commands that are meant for plugins:
@@ -60,6 +66,8 @@ enum {
 #define kConnexionCtlUncalibrate		'3dde'		// uncalibrate the device (i.e. reset calibration to 0,0,0,0,0,0)
 #define kConnexionCtlOpenPrefPane		'3dop'		// open the 3dconnexion preference pane in System Preferences
 #define kConnexionCtlSetSwitches		'3dss'		// set the current state of the client-controlled feature switches (bitmap, see masks below)
+#define kConnexionCtlActivateClient		'3dac'		// manually activate a client registered with the kConnexionClientManual signature (as if the client app entered foreground)
+#define kConnexionCtlDeactivateClient	'3ddc'		// manually deactivate a client registered with the kConnexionClientManual signature (as if the client app exited foreground)
 
 // Client capability mask constants (this mask defines which buttons and controls should be sent to clients, the others are handled by the driver)
 
