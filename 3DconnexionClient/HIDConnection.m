@@ -42,7 +42,10 @@ void unplugCallback(void* context, IOReturn result, void* sender, IOHIDDeviceRef
 	self = [super init];
 	if (!self) return nil;
 	self.hidManagerRef = IOHIDManagerCreate(kCFAllocatorDefault, 0);
-	IOHIDManagerOpen(self.hidManagerRef, 0);
+    
+    // Workaround: Open HID Manager exclusive with kIOHIDOptionsTypeSeizeDevice to prevent that Google Earth detects the HID Joystick by itself. Since GE has it's own  code to handle HID Joystick this leads to problem that both applications(GE and 3DconnexionClient) try to handle the events differently.
+	IOHIDManagerOpen(self.hidManagerRef, kIOHIDOptionsTypeSeizeDevice);
+    
 	self.plugHidDevs = [NSArray array];
 	[self startListeningOfNewDevices];
 	return self;

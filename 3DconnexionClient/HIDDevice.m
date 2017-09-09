@@ -415,6 +415,7 @@ void valueCallback(void* context, IOReturn result, void* sender, IOHIDValueRef v
 	{
 		// valuesOfButtons of 3D mouse seems to be ignorred by google earth
 		ConnexionDeviceState button_event;
+        memset(&button_event,0,sizeof(button_event));
 		button_event.buttons = 0;
 		button_event.version = kConnexionDeviceStateVers;
 		button_event.client = cl.clientID;
@@ -436,20 +437,18 @@ void valueCallback(void* context, IOReturn result, void* sender, IOHIDValueRef v
 					break;
 			}
 		}
-		if (theConnection.messageHandler != NULL && button_event.buttons != 0) theConnection.messageHandler(theConnection.connectionID,kConnexionMsgDeviceState,&button_event);
+		if (theConnection.messageHandler != NULL && button_event.buttons != 0)
+        {
+            theConnection.messageHandler(theConnection.connectionID,kConnexionMsgDeviceState,&button_event);
+        }
 		
 		
 		// google earth handle axis x,y,z,rx and rz (only ry is ignored)
 		ConnexionDeviceState axis_event;
+        memset(&axis_event,0,sizeof(axis_event));
 		axis_event.client = cl.clientID;
 		axis_event.version = kConnexionDeviceStateVers;
 		axis_event.command = kConnexionCmdHandleAxis;
-		axis_event.axis[0] = 0;
-		axis_event.axis[1] = 0;
-		axis_event.axis[2] = 0;
-		axis_event.axis[3] = 0;
-		axis_event.axis[4] = 0;
-		axis_event.axis[5] = 0;
 		// check now all axis configurations of device and map them
 		for(ConfigAxis *ax in self.config.mappingAxis)
 		{
@@ -462,11 +461,29 @@ void valueCallback(void* context, IOReturn result, void* sender, IOHIDValueRef v
 					{
 						if ([self getButtonValueAt:[ax.hidMaxAxisButtonIndex unsignedIntValue]] == YES)
 						{
-							if(cl.mask || axisMask[[ax.axisIndex unsignedIntValue]]) axis_event.axis[[ax.axisIndex unsignedIntValue]] = [ax.hidMappingScale intValue];
+							if(cl.mask || axisMask[[ax.axisIndex unsignedIntValue]])
+                            {
+                                axis_event.axis[[ax.axisIndex unsignedIntValue]] = [ax.hidMappingScale intValue];
+                                /*
+                                NSLog(@"Axis(Button Max) index %i %i",
+                                      [ax.hidAxisIndex unsignedIntValue],
+                                      [ax.hidMaxAxisButtonIndex unsignedIntValue]
+                                      );
+                                */
+                            }
 						}
 						else if ([self getButtonValueAt:[ax.hidMinAxisButtonIndex unsignedIntValue]] == YES)
 						{
-							if(cl.mask || axisMask[[ax.axisIndex unsignedIntValue]]) axis_event.axis[[ax.axisIndex unsignedIntValue]] = -[ax.hidMappingScale intValue];
+							if(cl.mask || axisMask[[ax.axisIndex unsignedIntValue]])
+                            {
+                                axis_event.axis[[ax.axisIndex unsignedIntValue]] = -[ax.hidMappingScale intValue];
+                                /*
+                                NSLog(@"Axis(Button Min) index %i %i",
+                                      [ax.hidAxisIndex unsignedIntValue],
+                                      [ax.hidMinAxisButtonIndex unsignedIntValue]
+                                      );
+                                 */
+                            }
 						}
 					}
 					break;
@@ -475,7 +492,19 @@ void valueCallback(void* context, IOReturn result, void* sender, IOHIDValueRef v
 					{
 						if ([self getAxisValueAt:[ax.hidAxisIndex unsignedIntValue]] > [ax.hidDeadZoneMax floatValue] || [self getAxisValueAt:[ax.hidAxisIndex unsignedIntValue]] < [ax.hidDeadZoneMin floatValue])
 						{
-							if(cl.mask || axisMask[[ax.axisIndex unsignedIntValue]]) axis_event.axis[[ax.axisIndex unsignedIntValue]] = [ax.hidMappingScale intValue]*[self getAxisValueAt:[ax.hidAxisIndex unsignedIntValue]];
+							if(cl.mask || axisMask[[ax.axisIndex unsignedIntValue]])
+                            {
+                                axis_event.axis[[ax.axisIndex unsignedIntValue]] = [ax.hidMappingScale intValue]*[self getAxisValueAt:[ax.hidAxisIndex unsignedIntValue]];
+                                /*
+                                NSLog(@"Axis(Analog) index %i mapped axis %5.2f/%5.2f %5.2f/%5.2f",
+                                      [ax.hidAxisIndex unsignedIntValue],
+                                      [self getAxisValueAt:[ax.hidAxisIndex unsignedIntValue]],
+                                      [ax.hidDeadZoneMax floatValue],
+                                      [self getAxisValueAt:[ax.hidAxisIndex unsignedIntValue]],
+                                      [ax.hidDeadZoneMin floatValue]
+                                      );
+                                 */
+                            }
 						}
 					}
 					break;
@@ -484,21 +513,24 @@ void valueCallback(void* context, IOReturn result, void* sender, IOHIDValueRef v
 			}
 			
 		}
-		if (theConnection.messageHandler != NULL) theConnection.messageHandler(theConnection.connectionID,kConnexionMsgDeviceState,&axis_event);
+        if (theConnection.messageHandler != NULL){
+            theConnection.messageHandler(theConnection.connectionID,kConnexionMsgDeviceState,&axis_event);
 
-		/*
-		 NSLog(@"ID:%4.4X %@ axis %5.2f/%5.2f %5.2f/%5.2f %5.2f/%5.2f buttons %i %i %i %i %i %i %i %i %i %i %i %i", theConnection.connectionID, self.devName,
-		 [self getAxisValueAt:0],[self getAxisValueAt:1],
-		 [self getAxisValueAt:2],[self getAxisValueAt:3],
-		 [self getAxisValueAt:4],[self getAxisValueAt:5],
-		 [self getButtonValueAt:0], [self getButtonValueAt:1], 
-		 [self getButtonValueAt:2], [self getButtonValueAt:3],
-		 [self getButtonValueAt:4], [self getButtonValueAt:5],
-		 [self getButtonValueAt:6], [self getButtonValueAt:7], 
-		 [self getButtonValueAt:8], [self getButtonValueAt:9],
-		 [self getButtonValueAt:10], [self getButtonValueAt:11]
-		 );
-		 */
+            /*
+            NSLog(@"ID:%4.4X %@ axis %5.2f/%5.2f %5.2f/%5.2f %5.2f/%5.2f buttons %i %i %i %i %i %i %i %i %i %i %i %i", theConnection.connectionID, self.devName,
+                  [self getAxisValueAt:0],[self getAxisValueAt:1],
+                  [self getAxisValueAt:2],[self getAxisValueAt:3],
+                  [self getAxisValueAt:4],[self getAxisValueAt:5],
+                  [self getButtonValueAt:0], [self getButtonValueAt:1],
+                  [self getButtonValueAt:2], [self getButtonValueAt:3],
+                  [self getButtonValueAt:4], [self getButtonValueAt:5],
+                  [self getButtonValueAt:6], [self getButtonValueAt:7],
+                  [self getButtonValueAt:8], [self getButtonValueAt:9],
+                  [self getButtonValueAt:10], [self getButtonValueAt:11]
+                  );
+             */
+        }
+		 
 	}
 }
 
