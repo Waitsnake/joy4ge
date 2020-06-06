@@ -58,12 +58,16 @@ void unplugCallback(void* context, IOReturn result, void* sender, IOHIDDeviceRef
 	[super dealloc];
 }
 
-- (void) startListeningOfNewDevices {
-	NSDictionary* matchDict = [NSDictionary dictionaryWithObjectsAndKeys:
-							   [NSNumber numberWithInt:kHIDPage_GenericDesktop], @kIOHIDDeviceUsagePageKey,
-							   [NSNumber numberWithInt:kHIDUsage_GD_Joystick],   @kIOHIDDeviceUsageKey,
-							   nil];
-	IOHIDManagerSetDeviceMatching(self.hidManagerRef, (CFDictionaryRef)matchDict);
+- (void) startListeningOfNewDevices {    
+    IOHIDManagerSetDeviceMatchingMultiple( self.hidManagerRef, (CFArrayRef) @[
+    @{ @(kIOHIDDeviceUsagePageKey): @(kHIDPage_GenericDesktop),
+        @(kIOHIDDeviceUsageKey): @(kHIDUsage_GD_Joystick)
+    },
+    @{ @(kIOHIDDeviceUsagePageKey): @(kHIDPage_GenericDesktop),
+        @(kIOHIDDeviceUsageKey): @(kHIDUsage_GD_GamePad)
+    }
+    ] );
+
 	IOHIDManagerRegisterDeviceMatchingCallback(self.hidManagerRef, plugCallback, self);
 	IOHIDManagerRegisterDeviceRemovalCallback(self.hidManagerRef, unplugCallback, self);
 	IOHIDManagerScheduleWithRunLoop(self.hidManagerRef, CFRunLoopGetMain(), kCFRunLoopDefaultMode);
