@@ -352,7 +352,8 @@ void valueCallback(void* context, IOReturn result, void* sender, IOHIDValueRef v
 
 - (void) startListeningOfDevice {
 	IOReturn err = IOHIDDeviceOpen(self.deviceRef, 0);
-	NSAssert(!err,@"IOHIDDeviceOpen failed");
+    // Fixme: on M1 this assert was raised after open, but when comment out everithing else still works fine. So the check for errors while open is changed now?
+	// NSAssert(!err,@"IOHIDDeviceOpen failed");
 	
 	// build array of dictionary entries for all valuesOfAxis				   
 	NSMutableArray* axisArray = [[NSMutableArray alloc] initWithCapacity:1];

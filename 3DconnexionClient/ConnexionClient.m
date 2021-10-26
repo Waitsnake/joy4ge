@@ -22,14 +22,19 @@ OSErr			InstallConnexionHandlers			(ConnexionMessageHandlerProc messageHandler, 
 	pool = [[NSAutoreleasePool alloc] init];
 	theConnection = [[[ConConnection alloc] initWithConnectionID:MY_ONE_CON_ID  andMsgHandler:messageHandler andAddHandler:addedHandler andRemHandler:removedHandler] retain];
 	theHidCollection = [[[HIDConnection alloc] init] retain];
-	NSLog(@"InstallConnexionHandlers(messageHandler = %8.8X, addedHandler = %8.8X, removedHandler = %8.8X)\n",(int32_t)messageHandler,(int32_t)addedHandler,(int32_t)removedHandler);
+	NSLog(@"InstallConnexionHandlers(messageHandler = %16.16llX, addedHandler = %16.16llX, removedHandler = %16.16llX)\n",(uint64_t)messageHandler,(uint64_t)addedHandler,(uint64_t)removedHandler);
 	return noErr;
 }
 
 OSErr			SetConnexionHandlers				(ConnexionMessageHandlerProc messageHandler, ConnexionAddedHandlerProc addedHandler, ConnexionRemovedHandlerProc removedHandler, bool useSeparateThread)
 {
-    NSLog(@"SetConnexionHandlers()\n");
-    // Not implemented, because not used by Google Earth	
+    // implemented since Google Earth 7.3.4 and used instead of InstallConnexionHandlers that older versions used
+    
+    pool = [[NSAutoreleasePool alloc] init];
+    theConnection = [[[ConConnection alloc] initWithConnectionID:MY_ONE_CON_ID  andMsgHandler:messageHandler andAddHandler:addedHandler andRemHandler:removedHandler] retain];
+    theHidCollection = [[[HIDConnection alloc] init] retain];
+    NSLog(@"SetConnexionHandlers(messageHandler = %16.16llX, addedHandler = %16.16llX, removedHandler = %16.16llX)\n",(uint64_t)messageHandler,(uint64_t)addedHandler,(uint64_t)removedHandler);
+    
     return noErr;
 }
 
