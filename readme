@@ -39,13 +39,18 @@ Attension: The controller needs now to be acivated inside Google Earth under Pre
 
 
 Update 2020:
------------
+------------
 Just recently I had the problem that last version of joy4ge seamed not to work with Google Earth 7.3.3.7786
 (it is updated without user interaction via Google Software Update!).
 I tried to re-install the 3DconnexionClient framework in ~/Library/framework of the user but this did not work.
 Than I installed into the /Library/frameworks of the system for all users and it worked again even with newest version.
 I than blocked Google Software Update via Little Snitch (I know this will also stop Updating the Google Chrome Browser).
 
+Update 2021:
+------------
+- Make it useable with Google Earth Pro 7.3.4.8248
+- Implement SetConnexionHandlers() since GE use this function now instead of InstallConnexionHandlers()
+- Framkeworl still only works when placed into /Library/frameworks but not within ~/Library/framework
 
 Copyright 2015 Marco Koehler
 

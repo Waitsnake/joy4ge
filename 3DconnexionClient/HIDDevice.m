@@ -352,9 +352,10 @@ void valueCallback(void* context, IOReturn result, void* sender, IOHIDValueRef v
 
 - (void) startListeningOfDevice {
 	IOReturn err = IOHIDDeviceOpen(self.deviceRef, 0);
-    // Fixme: on M1 this assert was raised after open, but when comment out everithing else still works fine. So the check for errors while open is changed now?
-	// NSAssert(!err,@"IOHIDDeviceOpen failed");
-	
+    // on older GE versions getting HID device gives only back kIOReturnSuccess,
+    // but newer versions of GE try to get the same HID exclusive as well and so we get herekIOReturnExclusiveAccess instead
+	NSAssert((err==kIOReturnSuccess)||(err=kIOReturnExclusiveAccess),@"IOHIDDeviceOpen failed err = %16.16llX",(uint64_t)err);
+    
 	// build array of dictionary entries for all valuesOfAxis				   
 	NSMutableArray* axisArray = [[NSMutableArray alloc] initWithCapacity:1];
 	for(UInt16 i=0;i<self.countAxis;i++)

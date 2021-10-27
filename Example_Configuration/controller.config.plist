@@ -31,6 +31,14 @@
 					<key>CF$UID</key>
 					<integer>42</integer>
 				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>54</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>66</integer>
+				</dict>
 			</array>
 		</dict>
 		<dict>
@@ -198,7 +206,7 @@
 			<key>hidDeadZoneMax</key>
 			<real>0.25</real>
 			<key>hidDeadZoneMin</key>
-			<real>-0.1500000059604645</real>
+			<real>-0.15000000596046448</real>
 			<key>hidMappingScale</key>
 			<integer>-500</integer>
 			<key>hidMappingType</key>
@@ -219,9 +227,9 @@
 			<key>hidAxisIndex</key>
 			<integer>0</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidDeadZoneMin</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidMappingScale</key>
 			<integer>100</integer>
 			<key>hidMappingType</key>
@@ -242,9 +250,9 @@
 			<key>hidAxisIndex</key>
 			<integer>0</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidDeadZoneMin</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidMappingScale</key>
 			<integer>500</integer>
 			<key>hidMappingType</key>
@@ -265,7 +273,7 @@
 			<key>hidAxisIndex</key>
 			<integer>2</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.1500000059604645</real>
+			<real>0.15000000596046448</real>
 			<key>hidDeadZoneMin</key>
 			<real>-0.2800000011920929</real>
 			<key>hidMappingScale</key>
@@ -288,7 +296,7 @@
 			<key>hidAxisIndex</key>
 			<integer>3</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.1500000059604645</real>
+			<real>0.15000000596046448</real>
 			<key>hidDeadZoneMin</key>
 			<real>-0.25</real>
 			<key>hidMappingScale</key>
@@ -444,9 +452,9 @@
 			<key>hidAxisIndex</key>
 			<integer>1</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.15</real>
+			<real>0.15000000596046448</real>
 			<key>hidDeadZoneMin</key>
-			<real>-0.15</real>
+			<real>-0.15000000596046448</real>
 			<key>hidMappingScale</key>
 			<integer>-2000</integer>
 			<key>hidMappingType</key>
@@ -467,9 +475,9 @@
 			<key>hidAxisIndex</key>
 			<integer>0</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidDeadZoneMin</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidMappingScale</key>
 			<integer>100</integer>
 			<key>hidMappingType</key>
@@ -490,9 +498,9 @@
 			<key>hidAxisIndex</key>
 			<integer>0</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidDeadZoneMin</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidMappingScale</key>
 			<integer>500</integer>
 			<key>hidMappingType</key>
@@ -513,7 +521,7 @@
 			<key>hidAxisIndex</key>
 			<integer>2</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.1500000059604645</real>
+			<real>0.15000000596046448</real>
 			<key>hidDeadZoneMin</key>
 			<real>-0.2800000011920929</real>
 			<key>hidMappingScale</key>
@@ -536,7 +544,7 @@
 			<key>hidAxisIndex</key>
 			<integer>3</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.1500000059604645</real>
+			<real>0.15000000596046448</real>
 			<key>hidDeadZoneMin</key>
 			<real>-0.25</real>
 			<key>hidMappingScale</key>
@@ -685,7 +693,7 @@
 			<key>hidDeadZoneMax</key>
 			<real>0.25</real>
 			<key>hidDeadZoneMin</key>
-			<real>-0.1500000059604645</real>
+			<real>-0.15000000596046448</real>
 			<key>hidMappingScale</key>
 			<integer>-500</integer>
 			<key>hidMappingType</key>
@@ -706,9 +714,9 @@
 			<key>hidAxisIndex</key>
 			<integer>0</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidDeadZoneMin</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidMappingScale</key>
 			<integer>100</integer>
 			<key>hidMappingType</key>
@@ -729,9 +737,9 @@
 			<key>hidAxisIndex</key>
 			<integer>0</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidDeadZoneMin</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidMappingScale</key>
 			<integer>500</integer>
 			<key>hidMappingType</key>
@@ -752,7 +760,7 @@
 			<key>hidAxisIndex</key>
 			<integer>3</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.1500000059604645</real>
+			<real>0.15000000596046448</real>
 			<key>hidDeadZoneMin</key>
 			<real>-0.2800000011920929</real>
 			<key>hidMappingScale</key>
@@ -775,7 +783,7 @@
 			<key>hidAxisIndex</key>
 			<integer>2</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.1500000059604645</real>
+			<real>0.15000000596046448</real>
 			<key>hidDeadZoneMin</key>
 			<real>-0.25</real>
 			<key>hidMappingScale</key>
@@ -899,9 +907,9 @@
 			<key>hidAxisIndex</key>
 			<integer>0</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.3</real>
+			<real>0.30000001192092896</real>
 			<key>hidDeadZoneMin</key>
-			<real>-0.3</real>
+			<real>-0.30000001192092896</real>
 			<key>hidMappingScale</key>
 			<integer>400</integer>
 			<key>hidMappingType</key>
@@ -922,9 +930,9 @@
 			<key>hidAxisIndex</key>
 			<integer>1</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.3</real>
+			<real>0.5</real>
 			<key>hidDeadZoneMin</key>
-			<real>-0.3</real>
+			<real>-0.5</real>
 			<key>hidMappingScale</key>
 			<integer>-400</integer>
 			<key>hidMappingType</key>
@@ -945,9 +953,9 @@
 			<key>hidAxisIndex</key>
 			<integer>0</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidDeadZoneMin</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidMappingScale</key>
 			<integer>100</integer>
 			<key>hidMappingType</key>
@@ -968,9 +976,9 @@
 			<key>hidAxisIndex</key>
 			<integer>0</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidDeadZoneMin</key>
-			<real>0</real>
+			<real>0.0</real>
 			<key>hidMappingScale</key>
 			<integer>400</integer>
 			<key>hidMappingType</key>
@@ -991,9 +999,9 @@
 			<key>hidAxisIndex</key>
 			<integer>3</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.3</real>
+			<real>0.5</real>
 			<key>hidDeadZoneMin</key>
-			<real>-0.3</real>
+			<real>-0.5</real>
 			<key>hidMappingScale</key>
 			<integer>400</integer>
 			<key>hidMappingType</key>
@@ -1014,11 +1022,543 @@
 			<key>hidAxisIndex</key>
 			<integer>2</integer>
 			<key>hidDeadZoneMax</key>
-			<real>0.3</real>
+			<real>0.5</real>
 			<key>hidDeadZoneMin</key>
-			<real>-0.3</real>
+			<real>-0.5</real>
 			<key>hidMappingScale</key>
 			<integer>-400</integer>
+			<key>hidMappingType</key>
+			<integer>2</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>0</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>17</integer>
+			</dict>
+			<key>hidName</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>55</integer>
+			</dict>
+			<key>mappingAxis</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>59</integer>
+			</dict>
+			<key>mappingButtons</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>56</integer>
+			</dict>
+		</dict>
+		<string>Wireless Controller</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>8</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>57</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>58</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>6</integer>
+			</dict>
+			<key>buttonIndex</key>
+			<integer>0</integer>
+			<key>hidButtonIndex</key>
+			<integer>4</integer>
+			<key>hidMappingType</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>6</integer>
+			</dict>
+			<key>buttonIndex</key>
+			<integer>1</integer>
+			<key>hidButtonIndex</key>
+			<integer>5</integer>
+			<key>hidMappingType</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>8</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>60</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>61</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>62</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>63</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>64</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>65</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>0</integer>
+			<key>hidAxisIndex</key>
+			<integer>0</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.25</real>
+			<key>hidDeadZoneMin</key>
+			<real>-0.25</real>
+			<key>hidMappingScale</key>
+			<integer>500</integer>
+			<key>hidMappingType</key>
+			<integer>2</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>0</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>1</integer>
+			<key>hidAxisIndex</key>
+			<integer>1</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.25</real>
+			<key>hidDeadZoneMin</key>
+			<real>-0.15000000596046448</real>
+			<key>hidMappingScale</key>
+			<integer>-500</integer>
+			<key>hidMappingType</key>
+			<integer>2</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>0</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>2</integer>
+			<key>hidAxisIndex</key>
+			<integer>0</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.0</real>
+			<key>hidDeadZoneMin</key>
+			<real>0.0</real>
+			<key>hidMappingScale</key>
+			<integer>100</integer>
+			<key>hidMappingType</key>
+			<integer>1</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>2</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>2</integer>
+			<key>hidAxisIndex</key>
+			<integer>0</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.0</real>
+			<key>hidDeadZoneMin</key>
+			<real>0.0</real>
+			<key>hidMappingScale</key>
+			<integer>400</integer>
+			<key>hidMappingType</key>
+			<integer>1</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>1</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>3</integer>
+			<key>hidAxisIndex</key>
+			<integer>5</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.15000000596046448</real>
+			<key>hidDeadZoneMin</key>
+			<real>-0.2800000011920929</real>
+			<key>hidMappingScale</key>
+			<integer>-1000</integer>
+			<key>hidMappingType</key>
+			<integer>2</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>0</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>5</integer>
+			<key>hidAxisIndex</key>
+			<integer>2</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.15000000596046448</real>
+			<key>hidDeadZoneMin</key>
+			<real>-0.25</real>
+			<key>hidMappingScale</key>
+			<integer>-500</integer>
+			<key>hidMappingType</key>
+			<integer>2</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>0</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>17</integer>
+			</dict>
+			<key>hidName</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>67</integer>
+			</dict>
+			<key>mappingAxis</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>71</integer>
+			</dict>
+			<key>mappingButtons</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>68</integer>
+			</dict>
+		</dict>
+		<string>DUALSHOCK 4 Wireless Controller</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>8</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>69</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>70</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>6</integer>
+			</dict>
+			<key>buttonIndex</key>
+			<integer>0</integer>
+			<key>hidButtonIndex</key>
+			<integer>4</integer>
+			<key>hidMappingType</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>6</integer>
+			</dict>
+			<key>buttonIndex</key>
+			<integer>1</integer>
+			<key>hidButtonIndex</key>
+			<integer>5</integer>
+			<key>hidMappingType</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>8</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>72</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>73</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>74</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>75</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>76</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>77</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>78</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>79</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>0</integer>
+			<key>hidAxisIndex</key>
+			<integer>0</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.25</real>
+			<key>hidDeadZoneMin</key>
+			<real>-0.25</real>
+			<key>hidMappingScale</key>
+			<integer>400</integer>
+			<key>hidMappingType</key>
+			<integer>2</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>0</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>1</integer>
+			<key>hidAxisIndex</key>
+			<integer>1</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.25</real>
+			<key>hidDeadZoneMin</key>
+			<real>-0.25</real>
+			<key>hidMappingScale</key>
+			<integer>-400</integer>
+			<key>hidMappingType</key>
+			<integer>2</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>0</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>2</integer>
+			<key>hidAxisIndex</key>
+			<integer>0</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.0</real>
+			<key>hidDeadZoneMin</key>
+			<real>0.0</real>
+			<key>hidMappingScale</key>
+			<integer>100</integer>
+			<key>hidMappingType</key>
+			<integer>1</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>1</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>2</integer>
+			<key>hidAxisIndex</key>
+			<integer>0</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.0</real>
+			<key>hidDeadZoneMin</key>
+			<real>0.0</real>
+			<key>hidMappingScale</key>
+			<integer>400</integer>
+			<key>hidMappingType</key>
+			<integer>1</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>2</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>2</integer>
+			<key>hidAxisIndex</key>
+			<integer>3</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0</real>
+			<key>hidDeadZoneMin</key>
+			<real>0</real>
+			<key>hidMappingScale</key>
+			<integer>100</integer>
+			<key>hidMappingType</key>
+			<integer>1</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>4</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>5</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>2</integer>
+			<key>hidAxisIndex</key>
+			<integer>3</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0</real>
+			<key>hidDeadZoneMin</key>
+			<real>0</real>
+			<key>hidMappingScale</key>
+			<integer>400</integer>
+			<key>hidMappingType</key>
+			<integer>1</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>6</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>7</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>3</integer>
+			<key>hidAxisIndex</key>
+			<integer>5</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.25</real>
+			<key>hidDeadZoneMin</key>
+			<real>-0.25</real>
+			<key>hidMappingScale</key>
+			<integer>-600</integer>
+			<key>hidMappingType</key>
+			<integer>2</integer>
+			<key>hidMaxAxisButtonIndex</key>
+			<integer>0</integer>
+			<key>hidMinAxisButtonIndex</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>11</integer>
+			</dict>
+			<key>axisIndex</key>
+			<integer>5</integer>
+			<key>hidAxisIndex</key>
+			<integer>2</integer>
+			<key>hidDeadZoneMax</key>
+			<real>0.25</real>
+			<key>hidDeadZoneMin</key>
+			<real>-0.25</real>
+			<key>hidMappingScale</key>
+			<integer>-600</integer>
 			<key>hidMappingType</key>
 			<integer>2</integer>
 			<key>hidMaxAxisButtonIndex</key>
