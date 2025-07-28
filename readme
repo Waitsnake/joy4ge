@@ -1,4 +1,6 @@
-joy4ge (Joystick for Google Earth) is a framework to connect any USB HID device (e.g. a Joystick) to an application that uses the 3DconnexionClient framework (e.g. Google Eath).
+joy4ge (Joystick for Google Earth)
+----------------------------------
+joy4ge is a framework to connect any USB HID device (e.g. a Joystick) to an application that uses the 3DconnexionClient framework (e.g. Google Eath).
 
 To download it from github (http://github.com/stino/joy4ge), click on the "Downloads" link in the upper right, click "Download as zip", and get a zip file.
 
@@ -28,6 +30,43 @@ Butunfortunely at moment I have no time and enough experience to develop such an
 But you can join the project anytime and support me with writing an GUI application if you want. :-)
 
 
+HIDToKey (Browser fallback tool)
+--------------------------------
+Since 2025, joy4ge includes a new command-line utility in the folder HIDToKey/ called HIDToKey.
+It’s a lightweight workaround for controlling Google Earth in the browser using any USB HID gamepad,
+even if Google Earth Pro stops working or the 3Dconnexion framework becomes unsupported.
+
+What is HIDToKey?
+HIDToKey is a standalone macOS tool written in Objective-C that:
+- Listens to button and axis events from any compatible game controller (HID)
+- Translates them into keyboard input (including modifier keys like Shift)
+- Can simulate directional keys, page up/down, and custom mappings
+- Works with Google Earth Web in Safari, Chrome, or Firefox
+Requires no installation, no dependencies, no 3Dconnexion API
+
+This project was created as a fallback to the joy4ge framework in case the native integration
+with Google Earth Pro becomes unusable.
+
+How to Build HIDToKey?
+cd HIDToKey
+./build.sh
+./HIDToKey
+
+The script compiles the utility and runs it. You’ll see debug output in the console for every input detected.
+Default Mapping
+
+By default, the mapping includes:
+- D-Pad → Arrow keys (for moving X/Y axis)
+- Buttons A/B/X/Y → Shift+Arrow keys (for tilt and rotate)
+- Triggers L1/R1 → Shift+Page up/down (to change camera height)
+- Triggers L2/R2 → Page up/down (for Zoom)
+- Left stick → Arrow keys (for moving X/Y axis)
+- Right stick → Shift+Arrow keys (for tilt and rotate)
+- Deadzone threshold for stable behavior of analog sticks
+
+You can customize all mappings by editing the HIDToKey.m source file.
+
+
 Update 2017:
 ------------
 - Add example configuration
@@ -36,7 +75,6 @@ Update 2017:
 - Update to 3Dconnexion API v10-4-4 (r2541)
 - Make it useable with Google Earth Pro 7.3.0.3832
 Attension: The controller needs now to be acivated inside Google Earth under Preferences->Navigation->Activate Controller
-
 
 Update 2020:
 ------------
@@ -52,5 +90,8 @@ Update 2021:
 - Implement SetConnexionHandlers() since GE use this function now instead of InstallConnexionHandlers()
 - Framkeworl still only works when placed into /Library/frameworks but not within ~/Library/framework
 
-Copyright 2015 Marco Koehler
+Update 2025:
+------------
+Introducing HIDToKey (Browser fallback tool)
 
+Copyright 2015 Marco Koehler
