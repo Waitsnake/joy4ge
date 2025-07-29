@@ -78,7 +78,7 @@ It will listen for input from connected USB HID devices and simulate keyboard in
    ```
 
 >  With Version 7.3 and later it works only from `/Library/Frameworks/`, not `~/Library/Frameworks/`
->  Tip: If you have a real 3Dconnexion device, you don’t need joy4ge.
+>  Tip: If you have a genuine 3Dconnexion device, you don’t need joy4ge.
 
 ### Version 6.0 for macOS
 
@@ -116,7 +116,7 @@ Google Earth ships with a **built-in 3DconnexionClient.framework** inside the ap
 
 ## 🖥️ Console Output
 
-When the joy4ge framework is active (means you installed it correct an than start Google Earth) and you have pluged in an USB HID device to your computer you should see in the Apple Console Log entries like this:
+When the joy4ge framework is active (means you installed it correctly and then started Google Earth) and you have plugged in a USB HID device to your computer you should see in the Apple Console Log entries like this:
 ```
 12.08.15 08:44:13,224 Google Earth[2885]: InstallConnexionHandlers()
 12.08.15 08:44:13,225 Google Earth[2885]: RegisterConnexionClient(signature = 45727468, name = (null), mode = 0001, mask = 00003F00)
@@ -156,7 +156,7 @@ It includes for each controller it was connected to:
 - Deadzone calibration
 - Sensitivity scaling
 
-The first generated configuration will be based on the developer's default controller. You can edit this file manually to suit your device.
+The first generated configuration will be based on the developer's default controller. You can manually edit this file to match your device.
 
 > ⚠️ Documentation on the structure of this config is still minimal. Check the source code for guidance.
 
@@ -183,7 +183,7 @@ Crash does not occur when:
 - a HID gamepad controller is connected via USB, or
 - the Bluetooth HID controller is connected after GE has started.
 
-⚠️ This is a bug in Google Earth Pro 7.3.6.x and and happens completely without `joy4ge` installed!
+⚠️ This is a bug in Google Earth Pro 7.3.6.x and happens completely without `joy4ge` installed!
      It is just listed here since you will very likely see it when using  `joy4ge` with a Bluetooth HID controller.
 
 #### Reproduction Steps:
@@ -198,40 +198,49 @@ Crash does not occur when:
 - Apple M1 via Rosetta (64-bit Intel)
 
 #### Hypothesis:
-Google Earth seems to register for HID devices directly during initialization, possibly without checking if the HID stack is fully ready (especially for Bluetooth devices which may initialize asynchronously). This might trigger a crash due to incomplete or invalid device state.
+Google Earth seems to register for HID devices directly during initialization, possibly without checking if the HID stack is fully ready (especially for Bluetooth devices, which may initialize asynchronously). This might trigger a crash due to incomplete or invalid device state.
 
 #### Workaround:
 Turning off Bluetooth before launching Google Earth avoids the crash.
 
 ## 📝 Changelog
 
-### 2025
+### **2025**
 - Added: `HIDToKey` as browser-compatible fallback tool
+- Updated: readme changed to readme.md
 - Axis deadzone handling and shift modifiers fully working
 - Project converted to GitHub with MIT License
 - `build.sh` script added
 
-### 2021
+### **2021**
 - Compatible with Google Earth Pro 7.3.4.8248
 - Added: Support for `SetConnexionHandlers()`
 - Works only from `/Library/Frameworks/`, not `~/Library/Frameworks/`
 
-### 2020
+### **2020**
 - Google Earth 7.3.3.7786 compatibility
 - Framework must now be installed in `/Library/Frameworks/`
 - Google Software Update interferes — workaround: block with Little Snitch
 
-### 2017
+### **2017**
 - Added: Example configuration
 - Updated: Project for Xcode 7.3.1
 - Updated: 3Dconnexion API v10-4-4 (r2541)
 - Google Earth Pro 7.3.0.3832 support
 
+### **2015**
+- Updated: for XCode 6.2 and SDK 10.9 
+- Updated: 3DconnexionClient framework version updated from 1.7.1 to 10.2.2
+- Added: readme
+
+### **2012**
+- Initial project started
+
 ---
 
 ## 👨‍💻 Authors
 
-- **Stino** — original author of `joy4ge` and `HIDToKey.m`
+- **Waitsnake** — original author of `joy4ge` and `HIDToKey.m`
 - **Keysworth** *(ChatGPT/OpenAI)* — co-author and helper for `HIDToKey.m`
 
 ---
