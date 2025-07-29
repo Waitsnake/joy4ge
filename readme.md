@@ -184,7 +184,7 @@ Crash does not occur when:
 - the Bluetooth HID controller is connected after GE has started.
 
 ⚠️ This is a bug in Google Earth Pro 7.3.6.x and and happens completely without `joy4ge` installed!
-     It is just listed here since you will very likly see it when using  `joy4ge` with a Bluetooth HID controller.
+     It is just listed here since you will very likely see it when using  `joy4ge` with a Bluetooth HID controller.
 
 #### Reproduction Steps:
 
