@@ -112,6 +112,28 @@ Google Earth ships with a **built-in 3DconnexionClient.framework** inside the ap
 - Diagonal movement and multi-key combos supported
 - Plain C and Objective-C — no dependencies
 
+### Einschränkungen
+
+⚠️ Dieses Tool ist in der aktuellen Version auf einfache HID-Gamepads ausgelegt:
+
+- Es kann **nur ein Gerät gleichzeitig** handhaben.  
+  Wenn ein weiteres Gerät während der Laufzeit angeschlossen wird, ist das Verhalten undefiniert.
+
+- Es werden **nur HID-Geräte unterstützt**, die alle relevanten Daten (Buttons, Achsen)  
+  in einem **einzigen Report** senden – typischerweise mit **Report-ID `0x30`**.
+
+- **Split-Reports**, wie sie z. B. von PS3-Controllern verwendet werden, werden aktuell **nicht unterstützt**.
+
+- Die Konfiguration (Tasten & Achsen) erfolgt manuell über die Datei:  
+  `~/Library/Application Support/HIDToKey/config.json`
+
+### Ausblick
+
+Eine zukünftige Version könnte:
+- mehrere Geräte gleichzeitig handhaben
+- Reports automatisch dekodieren (per `IOHIDElement`)
+- dynamisches Mapping über eine GUI ermöglichen
+
 ---
 
 ## 🖥️ Console Output
