@@ -171,7 +171,7 @@ The first generated configuration will be based on the developer's default contr
 
 ---
 
-## ⚠️ known-issues
+## ⚠️  Known Issues
 
 ### Google Earth Pro crashes on launch with connected Bluetooth HID (macOS)
 
