@@ -425,11 +425,15 @@ int main(int argc, const char * argv[]) {
 
         hidManager = IOHIDManagerCreate(kCFAllocatorDefault, kIOHIDOptionsTypeNone);
 
-        NSDictionary* matchDict = @{
-            @kIOHIDDeviceUsagePageKey: @(0x01), // Generic Desktop
-            @kIOHIDDeviceUsageKey: @(0x05)      // Gamepad
-        };
-        IOHIDManagerSetDeviceMatching(hidManager, (__bridge CFDictionaryRef)matchDict);
+        NSArray* matchMultiple = @[
+            @{ @kIOHIDDeviceUsagePageKey: @(kHIDPage_GenericDesktop),
+               @kIOHIDDeviceUsageKey: @(kHIDUsage_GD_Joystick) },
+
+            @{ @kIOHIDDeviceUsagePageKey: @(kHIDPage_GenericDesktop),
+               @kIOHIDDeviceUsageKey: @(kHIDUsage_GD_GamePad) }
+        ];
+        IOHIDManagerSetDeviceMatchingMultiple(hidManager, (__bridge CFArrayRef)matchMultiple);
+
 
         // Device connect/disconnect callbacks:
         IOHIDManagerRegisterDeviceMatchingCallback(hidManager, Handle_DeviceConnected, NULL);
