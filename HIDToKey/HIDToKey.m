@@ -46,8 +46,8 @@ const ButtonMapEntry buttonMap[MAX_BUTTONS] = {
     // A/B/X/Y Buttons (Byte 3, Bit 0–3)
     {  4, 3, 0x04, 126,  kCGEventFlagMaskShift, @"🅱️" }, // B -> Shift+Up
     {  5, 3, 0x02, 125,  kCGEventFlagMaskShift, @"❎" }, // X -> Shift+Down
-    {  6, 3, 0x01, 123,  kCGEventFlagMaskShift, @"🇾" }, // Y -> Shift+Left
-    {  7, 3, 0x08, 124,  kCGEventFlagMaskShift, @"🅰️" }, // A -> Shift+Right
+    {  6, 3, 0x01, 124,  kCGEventFlagMaskShift, @"🇾" }, // Y -> Shift+Right
+    {  7, 3, 0x08, 123,  kCGEventFlagMaskShift, @"🅰️" }, // A -> Shift+Left
 
     // L1/L2/R1/R2 Buttons (Byte 3, Bit 6-7) und (Byte 5, Bit 6-7)
     {  8, 5, 0x80, 121, 0, @"🇱2️⃣" }, // L2 -> Page Down
@@ -80,7 +80,7 @@ typedef struct {
 AxisMapEntry axisMap[NUM_AXES] = {
     { @"X", 6, false, 2048, 256, 123, 0, 124, 0, false, false }, // Left / Right
     { @"Y", 6, true,  2032, 256, 125, 0, 126, 0, false, false }, // Down / Up
-    { @"Zx", 9, false, 2048, 256,123, kCGEventFlagMaskShift, 124, kCGEventFlagMaskShift, false, false },    // rotate
+    { @"Zx", 9, false, 2048, 256,124, kCGEventFlagMaskShift, 123, kCGEventFlagMaskShift, false, false },    // rotate
     { @"Zy", 9, true,  2032, 256,126, kCGEventFlagMaskShift, 125, kCGEventFlagMaskShift, false, false },    // inclination
 };
 
